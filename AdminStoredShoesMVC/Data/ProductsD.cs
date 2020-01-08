@@ -3,15 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
+
 
 namespace Data
 {
     public class ProductsD
     {
-        DataProductsEntities db = new DataProductsEntities();
+        
         public List<Products> ListaProducts()
         {
-            return db.Products.ToList();
+            using (DataProductsEntities db = new DataProductsEntities())
+            {
+                //return db.Products.ToList();
+                return db.Products.Where (p=> p.IsEnabled == true).ToList();
+            }
+
         }
 
         public void AgregarProd(Products products)
@@ -38,23 +45,53 @@ namespace Data
             using (var db = new DataProductsEntities())
             {
                 var d = db.Products.Find(product.Id);
-                d.IdBrand = product.IdBrand;
-                d.IdCatalog = product.IdCatalog;
-                d.IdColor = product.IdColor;
-                d.IdProvider = product.IdProvider;
                 d.IdType = product.IdType;
-                d.IsEnabled = product.IsEnabled;
-                d.Keywords = product.Keywords;
-                d.PriceMember = product.PriceMember;
+                d.IdColor = product.IdColor;
+                d.IdBrand = product.IdBrand;
+                d.IdProvider = product.IdProvider;
+                d.IdCatalog = product.IdCatalog;
+                d.Title = product.Title;
+                d.Nombre = product.Nombre;
+                d.Description = product.Description;
+                d.Observations = product.Observations;
                 d.PriceDistributor = product.PriceDistributor;
                 d.PriceClient = product.PriceClient;
-                d.Nombre = product.Nombre;
-                d.Observations = product.Observations;
+                d.PriceMember = product.PriceMember;
+                d.IsEnabled = product.IsEnabled;
+                d.Keywords = product.Keywords;
                 d.DateUpdate = product.DateUpdate;
-                d.Title = product.Title;
-                d.Description = product.Description;
+
                 db.SaveChanges();
 
+            }
+        }
+        public void EliminarLogico (Products product)
+        {
+            using (var db = new DataProductsEntities())
+            {
+                var d = db.Products.Find(product.Id);
+                d.IsEnabled = false;
+                product.IsEnabled = false;
+                //db.Entry(d).State = EntityState.Modified;
+                db.SaveChanges();
+            }
+        }
+
+        //intento de busqueda por nombre
+        //public Products GetProducts(string nombre)
+        //{
+        //    using (var db = new DataProductsEntities())
+        //    {
+        //        return db.Products.Find(nombre);
+
+        //    }
+        //}
+
+        public List<Products> BuscaPorNombre(string cadena)
+        {
+            using(var db = new DataProductsEntities())
+            {
+                return db.Products.Where(p => p.Nombre.Contains(cadena)).ToList();
             }
         }
 

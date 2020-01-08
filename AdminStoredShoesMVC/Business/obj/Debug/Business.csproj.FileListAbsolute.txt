@@ -10,3 +10,15 @@ C:\Users\Curso\source\repos\AdminStoredShoesMVC\Business\obj\Debug\Business.cspr
 C:\Users\Curso\source\repos\AdminStoredShoesMVC\Business\obj\Debug\Business.csproj.CopyComplete
 C:\Users\Curso\source\repos\AdminStoredShoesMVC\Business\obj\Debug\Business.dll
 C:\Users\Curso\source\repos\AdminStoredShoesMVC\Business\obj\Debug\Business.pdb
+C:\Users\Curso\Documents\academia\Ejercicios\AdminStoredShoesMVC\Business\bin\Debug\Business.dll
+C:\Users\Curso\Documents\academia\Ejercicios\AdminStoredShoesMVC\Business\bin\Debug\Business.pdb
+C:\Users\Curso\Documents\academia\Ejercicios\AdminStoredShoesMVC\Business\bin\Debug\Data.dll
+C:\Users\Curso\Documents\academia\Ejercicios\AdminStoredShoesMVC\Business\bin\Debug\EntityFramework.dll
+C:\Users\Curso\Documents\academia\Ejercicios\AdminStoredShoesMVC\Business\bin\Debug\Data.pdb
+C:\Users\Curso\Documents\academia\Ejercicios\AdminStoredShoesMVC\Business\bin\Debug\Data.dll.config
+C:\Users\Curso\Documents\academia\Ejercicios\AdminStoredShoesMVC\Business\bin\Debug\EntityFramework.xml
+C:\Users\Curso\Documents\academia\Ejercicios\AdminStoredShoesMVC\Business\obj\Debug\Business.csprojAssemblyReference.cache
+C:\Users\Curso\Documents\academia\Ejercicios\AdminStoredShoesMVC\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
+C:\Users\Curso\Documents\academia\Ejercicios\AdminStoredShoesMVC\Business\obj\Debug\Business.csproj.CopyComplete
+C:\Users\Curso\Documents\academia\Ejercicios\AdminStoredShoesMVC\Business\obj\Debug\Business.dll
+C:\Users\Curso\Documents\academia\Ejercicios\AdminStoredShoesMVC\Business\obj\Debug\Business.pdb

@@ -60,8 +60,6 @@ namespace AdminStoredShoesMVC.Controllers
                 return RedirectToAction("Index");
             }
 
-
-
             catch (Exception ex)
             {
 
@@ -69,5 +67,38 @@ namespace AdminStoredShoesMVC.Controllers
                 return View(products);
             }
         }
+
+        public ActionResult EliminarLogico (int id)
+        {
+            var product = ProductsN.GetProducts(id);
+            return View(product);
+        }
+
+        [HttpPost]
+        public ActionResult EliminarLogico(Products products)
+        {
+            try
+            {
+                ProductsN.EliminarLogico(products);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+
+                ModelState.AddModelError("", "error");
+                return View(products);
+            }
+           
+        }
+
+        //INTENTO DE BUSQUEDA PPOR NOMBRE #1
+
+        public ActionResult BuscaPorNombre(string cadena="")
+        {
+            //cadena = "Adidas";
+            var products = ProductsN.BuscaPorNombre(cadena);
+            return View(products);
+        }
+
     }
 }

@@ -31,5 +31,15 @@ namespace Business
             prodD.Actualizar(product);
 
         }
+
+        public static void EliminarLogico(Products product)
+        {
+            prodD.EliminarLogico(product);
+        }
+
+        public static List<Products> BuscaPorNombre(string cadena)
+        {
+            return prodD.BuscaPorNombre(cadena);
+        }
     }
 }
