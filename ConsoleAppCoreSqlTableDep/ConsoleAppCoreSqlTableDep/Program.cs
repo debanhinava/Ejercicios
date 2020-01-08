@@ -47,9 +47,35 @@ namespace ConsoleAppCoreSqlTableDep
                 Console.ReadLine();
                 dep.Stop();
 
-
             }
+
+            FileSystemWatcher watcher = new FileSystemWatcher();
+            string watchPath = @"C:\Users\Curso\Documents\academia\ClienteSqlDep";
+            //string file = @"C:\\Users\\Curso\\Documents\\academia\\ClienteSqlDep.xml";
+            //watcher.Filter = (@"C:\Users\Curso\Documents\academia\ClienteSqlDep.xml");
+            watcher.Path = watchPath;
+            watcher.Filter = @"*.xml";
+            watcher.EnableRaisingEvents = true;
+            watcher.IncludeSubdirectories = true;
+            //watcher.Changed += watcher_Changed;
+            //_watcher.Changed += new FileSystemEventHandler(OnFileChanged);
+            watcher.Changed += new FileSystemEventHandler(onFileChanged);
+
+            //watcher.Deleted += watcher_Deleted;
+
+            Console.ReadLine();
         }
+
+        private static void onFileChanged(object sender, FileSystemEventArgs e)
+        {
+            
+            Console.WriteLine("File: {0} changed", e.Name);
+        }
+
+        //static void watcher_Changed(object sender, FileSystemEventArgs e)
+        //{
+        //    //Console.WriteLine("File: {0} changed", e.Name);
+        //}
 
         private static void Dep_OnChanged(object sender, TableDependency.SqlClient.Base.EventArgs.RecordChangedEventArgs<Cliente> e)
         {

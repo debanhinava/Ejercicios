@@ -10,3 +10,15 @@ C:\Users\Curso\source\repos\ConsoleAppCoreSqlTableDep\ConsoleAppCoreSqlTableDep\
 C:\Users\Curso\source\repos\ConsoleAppCoreSqlTableDep\ConsoleAppCoreSqlTableDep\obj\Debug\ConsoleAppCoreSqlTableDep.csproj.CopyComplete
 C:\Users\Curso\source\repos\ConsoleAppCoreSqlTableDep\ConsoleAppCoreSqlTableDep\obj\Debug\ConsoleAppCoreSqlTableDep.exe
 C:\Users\Curso\source\repos\ConsoleAppCoreSqlTableDep\ConsoleAppCoreSqlTableDep\obj\Debug\ConsoleAppCoreSqlTableDep.pdb
+C:\Users\Curso\Documents\academia\ShoesApp-SqlDependency\ConsoleAppCoreSqlTableDep\ConsoleAppCoreSqlTableDep\bin\Debug\ConsoleAppCoreSqlTableDep.exe.config
+C:\Users\Curso\Documents\academia\ShoesApp-SqlDependency\ConsoleAppCoreSqlTableDep\ConsoleAppCoreSqlTableDep\bin\Debug\ConsoleAppCoreSqlTableDep.exe
+C:\Users\Curso\Documents\academia\ShoesApp-SqlDependency\ConsoleAppCoreSqlTableDep\ConsoleAppCoreSqlTableDep\bin\Debug\ConsoleAppCoreSqlTableDep.pdb
+C:\Users\Curso\Documents\academia\ShoesApp-SqlDependency\ConsoleAppCoreSqlTableDep\ConsoleAppCoreSqlTableDep\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Curso\Documents\academia\ShoesApp-SqlDependency\ConsoleAppCoreSqlTableDep\ConsoleAppCoreSqlTableDep\bin\Debug\System.Data.Common.dll
+C:\Users\Curso\Documents\academia\ShoesApp-SqlDependency\ConsoleAppCoreSqlTableDep\ConsoleAppCoreSqlTableDep\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Curso\Documents\academia\ShoesApp-SqlDependency\ConsoleAppCoreSqlTableDep\ConsoleAppCoreSqlTableDep\bin\Debug\TableDependency.SqlClient.dll
+C:\Users\Curso\Documents\academia\ShoesApp-SqlDependency\ConsoleAppCoreSqlTableDep\ConsoleAppCoreSqlTableDep\obj\Debug\ConsoleAppCoreSqlTableDep.csprojAssemblyReference.cache
+C:\Users\Curso\Documents\academia\ShoesApp-SqlDependency\ConsoleAppCoreSqlTableDep\ConsoleAppCoreSqlTableDep\obj\Debug\ConsoleAppCoreSqlTableDep.csproj.CoreCompileInputs.cache
+C:\Users\Curso\Documents\academia\ShoesApp-SqlDependency\ConsoleAppCoreSqlTableDep\ConsoleAppCoreSqlTableDep\obj\Debug\ConsoleAppCoreSqlTableDep.csproj.CopyComplete
+C:\Users\Curso\Documents\academia\ShoesApp-SqlDependency\ConsoleAppCoreSqlTableDep\ConsoleAppCoreSqlTableDep\obj\Debug\ConsoleAppCoreSqlTableDep.exe
+C:\Users\Curso\Documents\academia\ShoesApp-SqlDependency\ConsoleAppCoreSqlTableDep\ConsoleAppCoreSqlTableDep\obj\Debug\ConsoleAppCoreSqlTableDep.pdb
