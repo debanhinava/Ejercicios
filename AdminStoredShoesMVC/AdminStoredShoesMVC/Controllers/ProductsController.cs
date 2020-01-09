@@ -15,6 +15,7 @@ namespace AdminStoredShoesMVC.Controllers
         {
 
             var products = ProductsN.ListaProducts();
+
             return View(products);
         }
 
@@ -93,12 +94,23 @@ namespace AdminStoredShoesMVC.Controllers
 
         //INTENTO DE BUSQUEDA PPOR NOMBRE #1
 
-        public ActionResult BuscaPorNombre(string cadena="")
+        public ActionResult BuscaPorNombre(string cadena)
         {
             //cadena = "Adidas";
-            var products = ProductsN.BuscaPorNombre(cadena);
-            return View(products);
+            if (!string.IsNullOrEmpty(cadena))
+            {
+                var products = ProductsN.BuscaPorNombre(cadena);
+                return View(products);
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
+
         }
+
+
+
 
     }
 }

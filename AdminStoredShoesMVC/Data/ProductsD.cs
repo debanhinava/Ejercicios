@@ -76,22 +76,15 @@ namespace Data
                 db.SaveChanges();
             }
         }
-
-        //intento de busqueda por nombre
-        //public Products GetProducts(string nombre)
-        //{
-        //    using (var db = new DataProductsEntities())
-        //    {
-        //        return db.Products.Find(nombre);
-
-        //    }
-        //}
-
+        
         public List<Products> BuscaPorNombre(string cadena)
         {
             using(var db = new DataProductsEntities())
             {
-                return db.Products.Where(p => p.Nombre.Contains(cadena)).ToList();
+                return db.Products.Where(p => 
+                p.Nombre.Contains(cadena) ||
+                p.Id.ToString().Contains(cadena)
+                ).ToList();
             }
         }
 
