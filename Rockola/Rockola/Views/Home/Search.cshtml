@@ -1,0 +1,22 @@
+﻿@model List<Google.Apis.YouTube.v3.Data.SearchResult>
+
+@foreach (var item in Model)
+{
+    <br>@item.Snippet.Title<br />
+    <label>@item.Id.VideoId</label><br />
+    var videoIdd = "http://www.youtube.com/embed/" + item.Id.VideoId.ToString();
+    
+    <div class="item">
+    
+    <iframe class="video w100" width="640" height="360" src="@videoIdd" frameborder="0"></iframe>
+    @*<iframe width="560" height="315" src="https://www.youtube.com/embed/@item.Id.VideoId" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>*@
+    
+    </div>
+
+
+
+    
+
+
+}
+

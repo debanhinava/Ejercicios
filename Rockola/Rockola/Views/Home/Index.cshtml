@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            <input type="text" class=" form-control" id="txtkeywork" placeholder="buscar"/>
+        </p>
+        <p><a class="btn btn-default" href="javascript:void(0)"onclick="btnSearch()">buscar</a></p>
+    </div>
+    <div class="col-md-4">
+        <div class="container" id="ListYoutube">
+        </div>
+    </div>
+</div>
+<script>
+    function btnSearch() {
+        $.ajax(
+            {
+                
+                url: '@Url.Action("SearchList")?Keywork=' + $('#txtkeywork').val(),
+                type: 'GET',             
+                success: function (result)
+                {
+                    $('#ListYoutube').html(result);
+                    
+                }
+            });
+    }
+
+</script>
