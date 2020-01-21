@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Playlist";
+}
+
+<h2>Playlist</h2>
+
+@model List<string>
+
+
+<div class="container" id="ListPlaylist">
+    <table>
+        <tr>
+            <td>
+
+                @foreach (var item in Model)
+                {
+                    @*<img class="img-responsive" src="http://img.youtube.com/vi/@item/mqdefault.jpg">*@
+                    <label>@item</label><br />
+               
+                    //para mostrar la imagen de cada video
+                    @*<img onclick="btnPlay ('@item')"
+            src="http://img.youtube.com/vi/@item/mqdefault.jpg" alt="@item">*@
+
+                }
+            </td>
+         </tr>
+    </table>
+</div>
+
+

@@ -2,21 +2,116 @@
 
 @foreach (var item in Model)
 {
-    <br>@item.Snippet.Title<br />
-    <label>@item.Id.VideoId</label><br />
-    var videoIdd = "http://www.youtube.com/embed/" + item.Id.VideoId.ToString();
-    
-    <div class="item">
-    
-    <iframe class="video w100" width="640" height="360" src="@videoIdd" frameborder="0"></iframe>
-    @*<iframe width="560" height="315" src="https://www.youtube.com/embed/@item.Id.VideoId" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>*@
-    
+    <div class="row">
+        <div class="col-md-4">
+            <div id="idvidd" data-name="@item.Id.VideoId"></div>
+            <br>@item.Snippet.Title<br />
+            @*<label>@item.Id.VideoId</label><br />*@
+
+            <p><a class="btn btn-default" href="javascript:void(0)" onclick="btnAgregar()">Agregar a lista </a></p>
+
+            @*<button type="button" onclick="player.destroy(); onYouTubeIframeAPIReady('@item.Id.VideoId');" class="btn btn-default"> Agregar a lista</button>*@
+
+
+            @*var videoIdd = "http://www.youtube.com/embed/" + item.Id.VideoId.ToString();*@
+
+            <img class="img-responsive" src="http://img.youtube.com/vi/@item.Id.VideoId/mqdefault.jpg">
+            @*<div class="item">*@
+
+
+            @*DOS FORMAS DE IFRAME QUE FUNCIONAN*@
+            @*<iframe class="video w100" width="640" height="360" src="@videoIdd" frameborder="0" ></iframe>*@
+
+
+            @*<iframe width="280" height="200" src="https://www.youtube.com/embed/@item.Id.VideoId?autoplay=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>*@
+
+        </div>
+
+
+        <div class="col-md-4">
+            tres columna
+
+        </div>
     </div>
 
 
 
-    
+    @*<script>
+
+        $("btnAgregar").click(function (IdVideo) {*@
 
 
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+        @*var IdVideo = $(@item.Id.VideoId).val();*@
+            $('#btnAgregar').click(function () {
+                @*var ids = {$(@item.Id.VideoId).val()}*@
+ 
+            $.ajax(
+                {
+
+                    url: '@Url.Action("AddToPlaylist", "Home")',
+                    //url:'/Home/AddToPlaylist',
+
+                    type: 'get',
+                    
+
+                    success: function (result) {
+                        $('#ListPlaylist').html(result);
+
+                    }
+                });
+
+
+        });
+
+
+        // 2. This code loads the IFrame Player API code asynchronously.
+        //var tag = document.createElement('script');
+
+        //tag.src = "https://www.youtube.com/iframe_api";
+        //var firstScriptTag = document.getElementsByTagName('script')[0];
+        //firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        //// 3. This function creates an <iframe> (and YouTube player)
+        ////    after the API code downloads.
+        //var player;
+        //function onYouTubeIframeAPIReady(VideoId) {
+        //    player = new YT.Player('player', {
+        //        height: '360',
+        //        width: '640',
+        //        videoId: VideoId,
+        //        events: {
+        //            'onReady': onPlayerReady,
+        //            'onStateChange': onPlayerStateChange
+        //        }
+        //    });
+        //}
+
+        //// 4. The API will call this function when the video player is ready.
+        //function onPlayerReady(event) {
+        //    event.target.playVideo();
+        //}
+
+        //// 5. The API calls this function when the player's state changes.
+        ////    The function indicates that when playing a video (state=1),
+        ////    the player should play for six seconds and then stop.
+        //var done = false;
+        //function onPlayerStateChange(event) {
+        //    if (event.data == YT.PlayerState.PLAYING && !done) {
+        //        setTimeout(stopVideo, 6000);
+        //        done = true;
+        //    }
+        //}
+        //function stopVideo() {
+        //    player.stopVideo();
+        //}
+    </script>
 }
+
+
+
+
 

@@ -22,7 +22,10 @@ namespace Rockola.Controllers
             {
 
                 //ApiKey = "AIzaSyDOWDXSYml18hvagwa91sPt0nHhFkSpWnA",
-                ApiKey = "AIzaSyCEvhnL2M-HB5bv_5w1boEYgSEKd_LsQww",
+
+                //ApiKey = "AIzaSyCEvhnL2M-HB5bv_5w1boEYgSEKd_LsQww",
+                //Ana
+                ApiKey= "AIzaSyCR3cGBWQwPAAL1d5F5wOd-3GnBn6quCO0",
                 ApplicationName = this.GetType().ToString()
             });
             var SearchListRequest = youtubeService.Search.List("snippet");
@@ -47,6 +50,29 @@ namespace Rockola.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+
+
+        public void Declare()
+        {
+            List<string> PlayListIds = new List<string>();
+            if(Session["Playlist"]==null)
+            {
+                Session["Playlist"] = PlayListIds;
+            }
+        }
+
+        [HttpGet]
+        public ActionResult AddToPlaylist(string IdVideo)
+        {
+            Declare();
+            
+            List<string>
+                ListVideosId = (List<string>)Session["Playlist"];
+            ListVideosId.Add(IdVideo);
+            return PartialView("Playlist", ListVideosId);
+            
         }
     }
 }
